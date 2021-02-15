@@ -1,6 +1,7 @@
 package portfolio.designpattern.gof.structural.bridge;
 
 import portfolio.designpattern.gof.structural.bridge.avatar.BridgeArcher;
+import portfolio.designpattern.gof.structural.bridge.avatar.BridgeOccupation;
 import portfolio.designpattern.gof.structural.bridge.avatar.BridgeWarrior;
 import portfolio.designpattern.gof.structural.bridge.weapon.BridgeBow;
 import portfolio.designpattern.gof.structural.bridge.weapon.BridgeSword;
@@ -17,17 +18,19 @@ import portfolio.designpattern.gof.structural.bridge.weapon.BridgeSword;
 
 public class BridgeClient {
 	public static void main(String[] args) {
-		BridgeWarrior warrior = new BridgeWarrior();
+		BridgeOccupation warrior = new BridgeWarrior();
 		warrior.setWeapon(new BridgeSword());
 		
 		warrior.attack();
-		warrior.tenAttacksSkill();
+		warrior.skill();
 		
-		BridgeArcher archer = new BridgeArcher();
+		System.out.println("**************************************************\n");
+		
+		BridgeOccupation archer = new BridgeArcher();
 		archer.setWeapon(new BridgeBow());
 		
 		archer.attack();
-		archer.aimingBowAttackSkill();
+		archer.skill();
 	}
 
 }

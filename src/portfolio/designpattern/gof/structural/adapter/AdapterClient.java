@@ -42,6 +42,7 @@ public class AdapterClient {
 	public static void main(String[] args) {
 		AvatarAction action;
 		
+		System.out.println("*****오브젝트 어댑터*****");
 		action = new ACompanyAdapter(new ACompanyWarrior());
 		action.attack();
 		
@@ -50,6 +51,7 @@ public class AdapterClient {
 		
 		System.out.println();
 		
+		System.out.println("*****클래스 어댑터*****");
 		action = new AWarriorAdapter();
 		action.move();
 		

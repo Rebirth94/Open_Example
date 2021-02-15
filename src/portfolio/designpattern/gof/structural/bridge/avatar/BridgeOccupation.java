@@ -24,4 +24,6 @@ public abstract class BridgeOccupation {
 	}
 	
 	abstract public void attack();
+
+	abstract public void skill();
 }

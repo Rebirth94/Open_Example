@@ -16,6 +16,11 @@ public class BridgeArcher extends BridgeOccupation {
 		System.out.println();
 	}
 	
+	@Override
+	public void skill() {
+		aimingBowAttackSkill();
+	}
+	
 	public void aimingBowAttackSkill() {
 		System.out.println( super.getName() + "이(가) 조준사격 스킬 사용");
 		BridgeWeapon weapon = super.getWeapon();
